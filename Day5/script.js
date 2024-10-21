@@ -44,38 +44,46 @@ document.addEventListener('DOMContentLoaded', function () {
   // test()
 
   const sunset = () => {
-    const sandGradient = ctx.createLinearGradient(0, 320, 0, 490)
-    sandGradient.addColorStop(0, 'orange')
-    sandGradient.addColorStop(1, 'brown')
 
-    ctx.fillStyle = sandGradient
-    ctx.fillRect(0, 320, 650, 170)
-
-    const waterGradient = ctx.createLinearGradient(0, 0, 0, 320)
-    waterGradient.addColorStop(0, 'blue')
-    waterGradient.addColorStop(1, 'lightblue')
-
-    ctx.fillStyle = waterGradient
-    ctx.fillRect(0, 200, 650, 120)
 
     const sunsetSkyGradient = ctx.createLinearGradient(0, 0, 0, 200)
-    sunsetSkyGradient.addColorStop(0, 'red')
-    sunsetSkyGradient.addColorStop(1, 'blue')
+    sunsetSkyGradient.addColorStop(0, 'black')
+    sunsetSkyGradient.addColorStop(1, 'red')
 
     ctx.fillStyle = sunsetSkyGradient
     ctx.fillRect(0, 0, 650, 200)
 
+    const sunLocation = {
+      x: 300,
+      y: 180
+    }
 
-    const sunsetGradient = ctx.createRadialGradient(300, 50, 5, 300, 100, 100)
+    const sunSize = 100
+
+    const sunsetGradient = ctx.createRadialGradient(sunLocation.x, sunLocation.y, 5, 300, 100, 100)
     sunsetGradient.addColorStop(0, 'yellow')
     sunsetGradient.addColorStop(1, 'orange')
 
     ctx.fillStyle = sunsetGradient
     ctx.beginPath()
-    ctx.arc(300, 50, 40, 0, 2 * Math.PI)
+    ctx.arc(sunLocation.x, sunLocation.y, sunSize, 0, 2 * Math.PI)
 
     ctx.fill()
 
+
+    const waterGradient = ctx.createLinearGradient(0, 0, 0, 320)
+    waterGradient.addColorStop(0, 'blue')
+    waterGradient.addColorStop(1, 'green')
+
+    ctx.fillStyle = waterGradient
+    ctx.fillRect(0, 200, 650, 220)
+
+    const sandGradient = ctx.createLinearGradient(0, 320, 0, 490)
+    sandGradient.addColorStop(0, 'orange')
+    sandGradient.addColorStop(1, 'brown')
+
+    ctx.fillStyle = sandGradient
+    ctx.fillRect(0, 420, 650, 170)
 
   }
   sunset()
