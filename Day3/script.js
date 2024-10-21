@@ -120,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.lineTo(250, 250)
     ctx.lineTo(250 + 200 * Math.cos(0), 250 + 200 * Math.sin(0))
     ctx.fill()
-    ctx.stroke()
 
     ctx.fillStyle = 'blue'
     ctx.beginPath()
@@ -128,7 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.lineTo(250, 250)
     ctx.lineTo(250 + 200 * Math.cos(Math.PI * 0.25), 250 + 200 * Math.sin(Math.PI * 0.25))
     ctx.fill()
-    ctx.stroke()
 
     ctx.fillStyle = 'green'
     ctx.beginPath()
@@ -136,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.lineTo(250, 250)
     ctx.lineTo(250 + 200 * Math.cos(Math.PI * 1), 250 + 200 * Math.sin(Math.PI * 1))
     ctx.fill()
-    ctx.stroke()
 
     ctx.fillStyle = 'yellow'
     ctx.beginPath()
@@ -144,6 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ctx.lineTo(250, 250)
     ctx.lineTo(250 + 200 * Math.cos(Math.PI * 1.5), 250 + 200 * Math.sin(Math.PI * 1.75))
     ctx.fill()
+
+    ctx.beginPath()
+    ctx.lineWidth = 5
+    ctx.arc(250, 250, 200, 0, Math.PI * 2)
     ctx.stroke()
   }
 
