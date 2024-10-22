@@ -127,6 +127,22 @@ document.addEventListener('DOMContentLoaded', function () {
   drawLeaf(1300, 20)
 
 
+  const signGradient = ctx.createLinearGradient(800, 300, 900, 400)
+  signGradient.addColorStop(0, 'red')
+  signGradient.addColorStop(1, 'blue')
+
+  ctx.fillStyle = signGradient;
+  ctx.fillRect(800, 300, 150, 100);
+  ctx.strokeRect(800, 300, 150, 100);
+
+  ctx.fillStyle = 'white';
+  ctx.font = '20px Arial';
+  ctx.fillText('For Sale', 840, 350);
+
+  ctx.fillStyle = 'brown';
+  ctx.fillRect(810, 400, 10, 50);
+  ctx.fillRect(930, 400, 10, 50);
+
 
 
 })
