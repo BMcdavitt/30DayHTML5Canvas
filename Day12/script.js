@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
       whiteGrayGrad.addColorStop(0, 'white');
       whiteGrayGrad.addColorStop(1, 'gray');
 
+      ctx.lineWidth = 3
 
       ctx.strokeStyle = redGrad;
       ctx.rotate((Math.PI / 180) * angle)
